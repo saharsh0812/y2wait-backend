@@ -13,16 +13,17 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
     'https://loadbhai-logistics.surge.sh',
+    'https://y2wait.surge.sh', 
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
-
 app.use(express.json());
 
 // ── RATE LIMITERS ─────────────────────────────────────────
